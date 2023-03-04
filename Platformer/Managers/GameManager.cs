@@ -10,7 +10,7 @@ public class GameManager
     public void Update()
     {
         InputManager.Update();
-        //first change
+        //first initialization for main branch
     }
 
     public void Draw()
