@@ -10,6 +10,7 @@ public class GameManager
     public void Update()
     {
         InputManager.Update();
+        //first change
     }
 
     public void Draw()
