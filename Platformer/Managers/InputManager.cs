@@ -9,6 +9,7 @@ public static class InputManager
     private static Vector2 _direction;
     public static Vector2 Direction => _direction;
     public static bool Moving => _direction != Vector2.Zero; //I will come here later
+    //why I cannot see green marker to make sure git is working perfectly fine 
 
     public static void Update()
     {
