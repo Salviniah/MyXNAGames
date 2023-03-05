@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Selviniah/RiderProjects/MyXNAGames/ButtonGame/Content/button.png","C:/Users/Selviniah/RiderProjects/MyXNAGames/ButtonGame/Content/bin/Windows/button.xnb","TextureProcessor","Texture2DContent",15320,102485,0.145087
+"C:/Users/Selviniah/RiderProjects/MyXNAGames/ButtonGame/Content/font.spritefont","C:/Users/Selviniah/RiderProjects/MyXNAGames/ButtonGame/Content/bin/Windows/font.xnb","FontDescriptionProcessor","SpriteFontContent",2005,70687,0.1145651
