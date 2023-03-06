@@ -1,0 +1,7 @@
+C:\Users\Selviniah\RiderProjects\MyXNAGames\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Selviniah\RiderProjects\MyXNAGames\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Selviniah\RiderProjects\MyXNAGames\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.AssemblyReference.cache
+C:\Users\Selviniah\RiderProjects\MyXNAGames\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Selviniah\RiderProjects\MyXNAGames\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Users\Selviniah\RiderProjects\MyXNAGames\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Selviniah\RiderProjects\MyXNAGames\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
