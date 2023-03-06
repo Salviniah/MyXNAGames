@@ -8,32 +8,35 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-    public Button _Button;
+    private GameManager _gm;
 
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+        _graphics.PreferredBackBufferHeight = 1200;
+        _graphics.PreferredBackBufferWidth = 800;
     }
 
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-
+        Globals.Content = Content;
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-        _Button = new(Content.Load<Texture2D>("button"),new Vector2(100,100));
-        // TODO: use this.Content to load your game content here
+        Globals.SpriteBatch = _spriteBatch;
+        _gm = new GameManager();
     }
 
     protected override void Update(GameTime gameTime)
     {
-        _Button.Update();
+        Globals.Update();
+        _gm.Update();
         base.Update(gameTime);
     }
 
@@ -41,7 +44,7 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
         _spriteBatch.Begin();
-        _Button.Draw(_spriteBatch);
+        _gm.Draw();
         _spriteBatch.End();
         // TODO: Add your drawing code here
 
