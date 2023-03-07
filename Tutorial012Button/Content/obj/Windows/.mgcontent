@@ -4,10 +4,12 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Selviniah/RiderProjects/MonogameNewSolution/Tutorial012/Content/Controls/Button.png</File>
-    <File>C:/Users/Selviniah/RiderProjects/MonogameNewSolution/Tutorial012/Content/Fonts/Font.spritefont</File>
+    <File>C:/Users/Selviniah/RiderProjects/MyProjects/MyXNAGames/Tutorial012Button/Content/Controls/Button.png</File>
+    <File>C:/Users/Selviniah/RiderProjects/MyProjects/MyXNAGames/Tutorial012Button/Content/Fonts/Font.spritefont</File>
+    <File>C:/Users/Selviniah/RiderProjects/MyProjects/MyXNAGames/Tutorial012Button/Content/Sprites/apple.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

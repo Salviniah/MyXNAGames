@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Selviniah/RiderProjects/MonogameNewSolution/Tutorial012/Content/Fonts/Font.spritefont</SourceFile>
+  <SourceFile>C:/Users/Selviniah/RiderProjects/MyProjects/MyXNAGames/Tutorial012Button/Content/Fonts/Font.spritefont</SourceFile>
   <SourceTime>2022-07-26T07:44:10-04:00</SourceTime>
-  <DestFile>C:/Users/Selviniah/RiderProjects/MonogameNewSolution/Tutorial012/Content/bin/Windows/Fonts/Font.xnb</DestFile>
-  <DestTime>2023-01-18T11:33:55.0692067-05:00</DestTime>
+  <DestFile>C:/Users/Selviniah/RiderProjects/MyProjects/MyXNAGames/Tutorial012Button/Content/bin/Windows/Fonts/Font.xnb</DestFile>
+  <DestTime>2023-03-07T17:59:59.7730069-05:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

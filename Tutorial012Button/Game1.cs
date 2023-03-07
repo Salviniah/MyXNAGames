@@ -59,8 +59,7 @@ public class Game1 : Game
 
     private void RandomButton_Click(object sender, EventArgs e)
     {
-        var random = new Random();
-        _backgroundColour = new Color(random.Next(0, 255),random.Next(0, 255),random.Next(0, 255));
+        
     } private void QuitButton_Click(object sender, EventArgs e)
     {
         Exit();
