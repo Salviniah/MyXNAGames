@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\ButtonGame\\ButtonGame.csproj": {}
+    "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\ButtonGame\\ButtonGame.csproj": {
+    "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\ButtonGame\\ButtonGame.csproj",
-        "projectName": "ButtonGame",
-        "projectPath": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\ButtonGame\\ButtonGame.csproj",
+        "projectUniqueName": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\Test\\Test.csproj",
+        "projectName": "Test",
+        "projectPath": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\Selviniah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\ButtonGame\\obj\\",
+        "outputPath": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Selviniah\\AppData\\Roaming\\NuGet\\NuGet.Config",

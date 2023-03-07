@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cUSXxR7CXZw4E4jACVQd5pZ8CSj+qf5yY+IYP8ii+HA8CM0Ac6HhIxVbeKaIADWkdTwvCMdlkAm4+j3w11+yFQ==",
+  "dgSpecHash": "c95FTh5lLI0Ko4vKr/XiPv+rjawSBJryCj5haqmDfXAt/dTWjWx/vMxK7IMtv1n3opFJ3Ba7iQz+VOqLwZ60XQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\ButtonGame\\ButtonGame.csproj",
+  "projectFilePath": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\DeleteWhenClicked\\DeleteWhenClicked.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Selviniah\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\Selviniah\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",
