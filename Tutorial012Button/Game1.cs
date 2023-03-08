@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -16,7 +17,7 @@ public class Game1 : Game
     private List<Component> _gameComponents;
     private MouseState _currentMouse;
     private bool _addEnabled, _delEnabled;
-    private bool _secondClick = false;
+    private bool _secondClick, runonce;
     private Vector2 _objectPosition;
     private float _timer;
     public event EventHandler Click;
@@ -36,6 +37,7 @@ public class Game1 : Game
             {
                 Position = new Vector2(0, 0),
                 Text = "Add",
+                Tag = 1,
             };
             
 
@@ -43,7 +45,8 @@ public class Game1 : Game
             new Button(Content.Load<Texture2D>("Controls/Button"), Content.Load<SpriteFont>("Fonts/Font"))
             {
                 Position = new Vector2(200, 0),
-                Text = "Quit",
+                Text = "Delete",
+                Tag = 2,
             };
 
         
@@ -86,17 +89,31 @@ public class Game1 : Game
                     _secondClick = true;
                 } //Only run for clicked once
 
-                if(_secondClick)
+                if(_secondClick && _addEnabled)
                 {
-                    if (_addEnabled)
+                    if (_timer > 0.5f)
                     {
-                        //set the object's position to  the position of the second click
-                        _objectPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+                        _currentMouse = Mouse.GetState();
+                        _objectPosition = new Vector2(_currentMouse.X, _currentMouse.Y); //set the object's position to  the position of the second click
                         var apple = new Apple(Content.Load<Texture2D>("Sprites/apple"), new Vector2(_objectPosition.X, _objectPosition.Y));
                         _gameComponents.Add(apple);
-                        break;  
+                        _timer = 0;
+                        break;
+                    }
+                    
+                }
+
+                if (_delEnabled)
+                {
+                    _currentMouse = Mouse.GetState();
+                    if (gameComponent is Apple apple && apple.AppRect.Contains(_currentMouse.X,_currentMouse.Y))
+                    {
+                        _gameComponents.RemoveAt(i);
+                        break;
                     }
                 }
+                
+                
             }
             gameComponent.Update(gameTime);
         }
@@ -125,13 +142,47 @@ public class Game1 : Game
         _delEnabled = false;
         
         _currentMouse = Mouse.GetState();
-        Click?.Invoke(this, EventArgs.Empty);
+        
+        for (int i = _gameComponents.Count -1; i>=0; i--)
+        {
+            var gameComponent = _gameComponents[i];
+            
+            if (gameComponent is Button button && button.Tag == 2)
+            {
+                button.Color = Color.Red;
+                if (!runonce)
+                {
+                    runonce = true;
+                    break;
+                }
+
+                if (runonce)
+                {
+                    _gameComponents.RemoveAt(_gameComponents.Count-1);
+                    
+                }
+            }
+        } //Switch button colors
 
     }
     
 
     private void DeleteButton_Click(object sender, EventArgs e)
     {
-        Exit();
+        _delEnabled = true;
+        _addEnabled = false;
+        
+        for (int i = _gameComponents.Count -1; i>=0; i--)
+        {
+            var gameComponent = _gameComponents[i];
+            
+            if (gameComponent is Button button && button.Tag == 1)
+            {
+                button.Color = Color.Red;
+                _gameComponents.RemoveAt(_gameComponents.Count-1);
+            } //Switch button colors
+            
+           
+        }
     }
 }

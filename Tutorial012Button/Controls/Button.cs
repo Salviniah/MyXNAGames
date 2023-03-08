@@ -25,6 +25,7 @@ public class Button : Component
     public Vector2 Position { get; set; }
     public Rectangle Rectangle => new Rectangle((int)Position.X, (int)Position.Y, _texture.Width, _texture.Height); //rect for text box
     public string Text { get; set; }
+    public int Tag { get; set; }
     #endregion
 
 

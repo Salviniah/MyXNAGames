@@ -8,7 +8,7 @@ public class Apple : Component
     private Texture2D _texture;
     private Vector2 _Position;
     private Color _color;
-    private Rectangle appRect => new Rectangle((int)_Position.X, (int)_Position.Y, _texture.Width, _texture.Height);
+    public Rectangle AppRect => new Rectangle((int)_Position.X, (int)_Position.Y, _texture.Width, _texture.Height);
     
     public Apple(Texture2D texture, Vector2 position)
     {
@@ -19,7 +19,7 @@ public class Apple : Component
 
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
-        spriteBatch.Draw(_texture,appRect,Color.White);    
+        spriteBatch.Draw(_texture,AppRect,Color.White);    
     }
 
     public override void Update(GameTime gameTime)
