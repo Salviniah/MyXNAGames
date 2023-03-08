@@ -5,13 +5,25 @@ namespace Tutorial012.Sprites;
 
 public class Apple : Component
 {
+    private Texture2D _texture;
+    private Vector2 _Position;
+    private Color _color;
+    private Rectangle appRect => new Rectangle((int)_Position.X, (int)_Position.Y, _texture.Width, _texture.Height);
+    
+    public Apple(Texture2D texture, Vector2 position)
+    {
+        _texture = texture;
+        _Position = position;
+    }
+
+
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
-        throw new System.NotImplementedException();
+        spriteBatch.Draw(_texture,appRect,Color.White);    
     }
 
     public override void Update(GameTime gameTime)
     {
-        throw new System.NotImplementedException();
+        
     }
 }

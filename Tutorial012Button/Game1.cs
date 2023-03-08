@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Tutorial012.Controls;
-
+using Tutorial012.Sprites;
+using Button = Tutorial012.Controls.Button;
 namespace Tutorial012;
 
 public class Game1 : Game
@@ -13,7 +13,13 @@ public class Game1 : Game
     private SpriteBatch _spriteBatch;
 
     private Color _backgroundColour = Color.CornflowerBlue;
-    private List<Component> _GameComponents;
+    private List<Component> _gameComponents;
+    private MouseState _currentMouse;
+    private bool _addEnabled, _delEnabled;
+    private bool _secondClick = false;
+    private Vector2 _objectPosition;
+    private float _timer;
+    public event EventHandler Click;
     
 
     public Game1()
@@ -25,28 +31,33 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
-        var randomButton =
+        var addButton =
             new Button(Content.Load<Texture2D>("Controls/Button"), Content.Load<SpriteFont>("Fonts/Font"))
             {
                 Position = new Vector2(0, 0),
-                Text = "0",
+                Text = "Add",
             };
+            
 
-        var quitButton =
+        var deleteButton =
             new Button(Content.Load<Texture2D>("Controls/Button"), Content.Load<SpriteFont>("Fonts/Font"))
             {
                 Position = new Vector2(200, 0),
                 Text = "Quit",
             };
+
         
-        _GameComponents = new List<Component>()
+        
+        _gameComponents = new List<Component>()
         {
-            randomButton,
-            quitButton,
+            addButton,
+            deleteButton,
+            
         };
         
-        randomButton.Click += RandomButton_Click;
-        quitButton.Click += QuitButton_Click;
+        addButton.Click += AddButton_Click;
+        deleteButton.Click += DeleteButton_Click;
+        
         base.Initialize();
     }
 
@@ -54,38 +65,73 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
-
     }
 
-    private void RandomButton_Click(object sender, EventArgs e)
-    {
-        
-    } private void QuitButton_Click(object sender, EventArgs e)
-    {
-        Exit();
-    }
+
+    // Event handler for the mouse click event
 
     protected override void Update(GameTime gameTime)
     {
-        foreach (var gameComponent in _GameComponents)
+        _timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+        
+        for (int i = 0; i < _gameComponents.Count; i++)
         {
+            var gameComponent = _gameComponents[i];
+
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                if (!_secondClick)
+                {
+                    //set the object's position to the position of the first click
+                    _secondClick = true;
+                } //Only run for clicked once
+
+                if(_secondClick)
+                {
+                    if (_addEnabled)
+                    {
+                        //set the object's position to  the position of the second click
+                        _objectPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+                        var apple = new Apple(Content.Load<Texture2D>("Sprites/apple"), new Vector2(_objectPosition.X, _objectPosition.Y));
+                        _gameComponents.Add(apple);
+                        break;  
+                    }
+                }
+            }
             gameComponent.Update(gameTime);
         }
 
+
         base.Update(gameTime);
+        
     }
 
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(_backgroundColour);
         _spriteBatch.Begin();
-        foreach (var gameComponent in _GameComponents)
+        foreach (var gameComponent in _gameComponents)
         {
             gameComponent.Draw(gameTime,_spriteBatch);
         }
         _spriteBatch.End();
-        // TODO: Add your drawing code here
 
         base.Draw(gameTime);
+    }
+
+    private void AddButton_Click(object sender, EventArgs e)
+    {
+        _addEnabled = true;
+        _delEnabled = false;
+        
+        _currentMouse = Mouse.GetState();
+        Click?.Invoke(this, EventArgs.Empty);
+
+    }
+    
+
+    private void DeleteButton_Click(object sender, EventArgs e)
+    {
+        Exit();
     }
 }
