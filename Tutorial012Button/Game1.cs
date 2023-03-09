@@ -156,7 +156,7 @@ public class Game1 : Game
                     break;
                 }
 
-                if (runonce)
+                if (runonce && gameComponent is Apple) //rider telling me this code will be always false but to understand the logic, I want to keep this code 
                 {
                     _gameComponents.RemoveAt(_gameComponents.Count-1);
                     
