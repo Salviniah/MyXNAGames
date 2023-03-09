@@ -7537,11 +7537,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Selviniah\\RiderProjects\\MyXNAGames\\Platformer\\Platformer.csproj",
+      "projectUniqueName": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\Platformer\\Platformer.csproj",
       "projectName": "Platformer",
-      "projectPath": "C:\\Users\\Selviniah\\RiderProjects\\MyXNAGames\\Platformer\\Platformer.csproj",
+      "projectPath": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\Platformer\\Platformer.csproj",
       "packagesPath": "C:\\Users\\Selviniah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Selviniah\\RiderProjects\\MyXNAGames\\Platformer\\obj\\",
+      "outputPath": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\Platformer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Selviniah\\AppData\\Roaming\\NuGet\\NuGet.Config",

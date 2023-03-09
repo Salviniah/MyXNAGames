@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5dQ5bokOkzt/wBqYCFPmzn3DxHEVJ9tejCYRCFBKAjFBlv7T0qnsMf1ddy7z+27Gt4wdrullSQ9xeY7I9gPC7g==",
+  "dgSpecHash": "qM47B2IE34ebJGNM5hbgBg/hGmVwOb5affJFGdrhAII5MldKPbY5x62Q7wRsT/ZtH1zr6VkaPrs0Sz2Q26mWaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Selviniah\\RiderProjects\\MyXNAGames\\Platformer\\Platformer.csproj",
+  "projectFilePath": "C:\\Users\\Selviniah\\RiderProjects\\MyProjects\\MyXNAGames\\Platformer\\Platformer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Selviniah\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\Selviniah\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",
