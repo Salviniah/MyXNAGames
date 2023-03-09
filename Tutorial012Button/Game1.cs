@@ -71,7 +71,7 @@ public class Game1 : Game
     }
 
 
-    // Event handler for the mouse click event
+    // Event handler for the mouse click event extra
 
     protected override void Update(GameTime gameTime)
     {
